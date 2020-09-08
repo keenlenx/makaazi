@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\PricingSearch */
+/* @var $model backend\models\ApartmentsSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="pricing-search">
+<div class="apartments-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
@@ -18,11 +18,13 @@ use yii\widgets\ActiveForm;
         ],
     ]); ?>
 
-    <?= $form->field($model, 'code') ?>
+    <?= $form->field($model, 'a_id') ?>
 
-    <?= $form->field($model, 'bill_type') ?>
+    <?= $form->field($model, 'a_name') ?>
 
-    <?= $form->field($model, 'price') ?>
+    <?= $form->field($model, 'a_location') ?>
+
+    <?= $form->field($model, 'a_capacity') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

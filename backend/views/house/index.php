@@ -4,18 +4,18 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\MeterSearch */
+/* @var $searchModel backend\models\HouseSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Meters';
+$this->title = 'Houses';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="meter-index">
+<div class="house-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Meter', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create House', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php Pjax::begin(); ?>
@@ -27,8 +27,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'meterno',
-            'serialnumber',
+            'h_number',
+            'h_apartment_id',
+            'h_rent',
+            'h_deposit',
+            'h_water_deposit',
+            //'h_type',
+            //'h_bedrooms',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

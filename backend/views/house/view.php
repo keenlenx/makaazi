@@ -4,20 +4,20 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Pricing */
+/* @var $model backend\models\House */
 
-$this->title = $model->code;
-$this->params['breadcrumbs'][] = ['label' => 'Pricings', 'url' => ['index']];
+$this->title = $model->h_number;
+$this->params['breadcrumbs'][] = ['label' => 'Houses', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="pricing-view">
+<div class="house-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->code], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->code], [
+        <?= Html::a('Update', ['update', 'id' => $model->h_number], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->h_number], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -29,9 +29,13 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'code',
-            'bill_type',
-            'price',
+            'h_number',
+            'h_apartment_id',
+            'h_rent',
+            'h_deposit',
+            'h_water_deposit',
+            'h_type',
+            'h_bedrooms',
         ],
     ]) ?>
 

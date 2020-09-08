@@ -4,17 +4,19 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Pricing */
+/* @var $model backend\models\Apartments */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="pricing-form">
+<div class="apartments-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'bill_type')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'a_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'price')->textInput() ?>
+    <?= $form->field($model, 'a_location')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'a_capacity')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

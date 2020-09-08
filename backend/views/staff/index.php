@@ -4,18 +4,18 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\PricingSearch */
+/* @var $searchModel backend\models\StaffSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Pricings';
+$this->title = 'Staff';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="pricing-index">
+<div class="staff-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Pricing', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Staff', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php Pjax::begin(); ?>
@@ -27,9 +27,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'code',
-            'bill_type',
-            'price',
+            's_id',
+            's_name',
+            's_phone',
+            's_role',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
