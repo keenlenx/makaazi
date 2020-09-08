@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+
+use backend\models\Pricing;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Invoice */
@@ -16,9 +19,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'meterno')->textInput() ?>
 
-    <?= $form->field($model, 'billtype')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'billtype')->dropDownList(
+        ArrayHelper::map(Pricing::find()->all(),'price','bill_type'),['prompt'=>'Select Bill Type']
+        ) ?>
 
-    <?= $form->field($model, 'amount')->textInput() ?>
+    <?= $form->field($model, 'amount')->textInput(['value'=>'500','disabled' => false]) ?>
 
     <?= $form->field($model, 'datecreated')->textInput() ?>
 
@@ -26,7 +31,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'txncode')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'paymentmode')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'paymentmode')->dropDownList(['MPESA'=>'MPESA','CARD'=>'VISA/MASTERCARD'])  ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

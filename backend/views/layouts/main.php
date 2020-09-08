@@ -36,11 +36,11 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Invoices', 'url' => ['/invoice']],
-        ['label' => 'Meter', 'url' => ['/meter']],
-        ['label' => 'Reading', 'url' => ['/reading']],
-        ['label' => 'Pricing', 'url' => ['/pricing']],
+        ['label' => 'Home', 'url' => ['/site']],
+        ['label' => 'Apartments', 'url' => ['/apartments']],
+        ['label' => 'House', 'url' => ['/house']],
+        ['label' => 'Tenants', 'url' => ['/tenants']],
+        ['label' => 'Staff', 'url' => ['/staff']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];

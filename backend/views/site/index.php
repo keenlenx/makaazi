@@ -2,14 +2,14 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'AQUALEDGE';
+$this->title = 'MAKAAZI REALTORS';
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>AQUALEDGE!</h1>
+        <h1>MAKAAZI REALTORS</h1>
 
-        <p class="lead">Welcome to our comprehensive  billing application</p>
+        <p class="lead">Welcome to our comprehensive  Real Estate application</p>
         <p><a class="btn btn-lg btn-success" href="#">Get started</a></p>
     </div>
 

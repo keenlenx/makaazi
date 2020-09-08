@@ -7,8 +7,8 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'aqualedge-backend',
-    'name'=>'AQUALEDGE',
+    'id' => 'makaazi-backend',
+    'name'=>'MAKAAZI',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
